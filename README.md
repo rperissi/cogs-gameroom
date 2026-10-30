@@ -82,6 +82,19 @@ never get seated together. Ids are first come, first served; there is no
 registry yet. Open an issue here if you want yours listed on the lobby
 page with a display name.
 
+## Running your own server instead
+
+The lobby is for games that want matchmaking and nothing to host. If your
+game has a server of its own, the card is still the socket. `CONNECT`
+and `SEND` with a plaintext line protocol work from a ProDOS 8 program the
+same way `HTTP` does, and the card does the DNS and the TCP. Scott Whitney's
+[trail-net](https://github.com/WhitneyDesignLabs/trail-net) (MIT) is the
+worked example of that path: a small line protocol on TCP port 6502 with
+a register wall, room notes and a count, a server in Python, and Apple II
+drivers for the CoGS card, an Uthernet II and a Super Serial Card relay.
+His game Independence (128K IIe, 2026) uses it and is in the CoGS disk
+catalog.
+
 ## Status
 
 The lobby is v0.1 and live. The turn-based tier (this repo) is the one
